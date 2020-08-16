@@ -1,0 +1,40 @@
+{
+  "name": "gatsby-source-amazon-paapi",
+  "version": "1.0.0",
+  "description": "A GatsbyJS plugin for sourcing data from Amazon's Product Advertising API",
+  "repository": "github:let00/gatsby-source-amazon-paapi",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm run build:types && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-source-amazon-paapi"
+  ],
+  "author": "Tony Le <tony.le@usa.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.1",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-typescript": "^7.10.4",
+    "typescript": "^3.9.7"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.24.26",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "dependencies": {
+    "gatsby": "^2.24.47",
+    "p-throttle": "^3.1.0",
+    "paapi5-nodejs-sdk": "^1.1.0"
+  }
+}
