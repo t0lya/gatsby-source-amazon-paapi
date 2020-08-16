@@ -1,7 +1,7 @@
 {
   "name": "gatsby-source-amazon-paapi",
   "version": "1.0.0",
-  "description": "A GatsbyJS plugin for sourcing data from Amazon's Product Advertising API",
+  "description": "Gatsby plugin for sourcing data from the Amazon Product Advertising API",
   "repository": "github:let00/gatsby-source-amazon-paapi",
   "main": "lib/index.js",
   "types": "types/index.d.ts",
