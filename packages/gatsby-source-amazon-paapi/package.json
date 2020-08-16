@@ -4,6 +4,7 @@
   "description": "A GatsbyJS plugin for sourcing data from Amazon's Product Advertising API",
   "repository": "github:let00/gatsby-source-amazon-paapi",
   "main": "lib/index.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "type-check": "tsc --noEmit",
