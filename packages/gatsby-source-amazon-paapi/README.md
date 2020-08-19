@@ -77,23 +77,31 @@ A Gatsby plugin for sourcing data from the [Amazon Product Advertising API](http
   An array of queries used to find your items of interest. Two parameters are required for every query: `PartnerTag` and `PartnerType`. You can find out how to get these two parameters from [Amazon's documentation](https://webservices.amazon.com/paapi5/documentation/common-request-parameters.html). For all possible parameters you can place in your query, [click here](https://webservices.amazon.com/paapi5/documentation/common-request-parameters.html).
 
   ```js
-  [
-    {
-      // Amazon partner program credentials
-      PartnerTag: '', // required
-      PartnerType: '', // required
+  module.exports = {
+    plugins: [
+      {
+        resolve: 'gatsby-source-amazon-paapi',
+        options: {
+          queries: [
+            {
+              // Amazon partner program credentials
+              PartnerTag: '', // required
+              PartnerType: '', // required
 
-      // Filter items
-      Condition: 'Used', // optional
-      ItemCount: 10, // optional
-      MaxPrice: 3241, // optional
+              // Filter items
+              Condition: 'Used', // optional
+              ItemCount: 10, // optional
+              MaxPrice: 3241, // optional
 
-      // Values to return
-      Resources: ['Images.Primary.Medium', 'ItemInfo.Title'], // optional, defaults to ItemInfo.Title
-    },
+              // Values to return
+              Resources: ['Images.Primary.Medium', 'ItemInfo.Title'], // optional, defaults to ItemInfo.Title
+            },
+          ],
+        },
+      },
+    ],
+  };
   ```
-
-];
 
 ## License
 
