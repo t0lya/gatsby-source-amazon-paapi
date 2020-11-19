@@ -7,14 +7,20 @@
 module.exports = {
   plugins: [
     {
-      resolve: `gatsby-source-prismic-graphql`,
+      resolve: 'gatsby-source-amazon-paapi',
       options: {
-        accessKey: "",
-        secretKey: "",
-        host: "webservices.amazon.com	",
-        region: "us-east-1",
-        queries: [],
+        accessKey: '',
+        secretKey: '',
+        host: '',
+        region: '',
+        queries: [
+          {
+            PartnerTag: '',
+            PartnerType: '',
+            Resources: ['Images.Primary.Medium', 'ItemInfo.Title'],
+          },
+        ],
       },
     },
   ],
-}
+};
